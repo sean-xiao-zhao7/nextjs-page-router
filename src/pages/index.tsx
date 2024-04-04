@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home(props: any) {
     return (
         <main
             className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
@@ -29,9 +29,7 @@ export default function Home() {
                             NextJS Router Test Project 1
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
-                            Anim aute id magna aliqua ad ad non deserunt sunt.
-                            Qui irure qui lorem cupidatat commodo. Elit sunt
-                            amet fugiat veniam occaecat fugiat aliqua.
+                            {props.children}
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
                             <a
